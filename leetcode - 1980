@@ -1,0 +1,14 @@
+class Solution(object):
+    def findDifferentBinaryString(self, nums):
+        """
+        :type nums: List[str]
+        :rtype: str
+        """
+        n = len(nums)
+        is_there = set()
+        for i in nums:
+            is_there.add(int(i,2))
+        for i in range(2**n):
+            if i not in is_there:
+                return format(i,'b').zfill(n)
+        return ""
