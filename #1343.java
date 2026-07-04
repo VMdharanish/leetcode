@@ -5,7 +5,6 @@ class Solution {
 
         int windowSum = 0;
 
-        // First window
         for (int i = 0; i < k; i++) {
             windowSum += arr[i];
         }
@@ -16,7 +15,6 @@ class Solution {
             count++;
         }
 
-        // Slide window
         for (int i = k; i < arr.length; i++) {
 
             windowSum += arr[i] - arr[i - k];
